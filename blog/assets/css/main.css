@@ -1,17 +1,23 @@
-        body,
+:root{
+--logo-background: #777;
+--body-fontfamily: "Lato", sans-serif;
+}
+
+
+body,
         h1,
         h2,
         h3,
         h4,
         h5,
         h6 {
-            font-family: "Lato", sans-serif;
+            font-family: var(--body-fontfamily);
         }
 
         body,
         html {
             height: 100%;
-            color: #777;
+            color: var(--logo-background);
             line-height: 1.8;
         }
 
