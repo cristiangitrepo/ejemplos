@@ -1,5 +1,6 @@
 :root {
     --bg-url: url('https://picsum.photos/600/400');
+    --watermark-url: url("../img/beacon.svg");
     --h1-bg-color: #00000080;
     --h1-foreground-color: #fff;
     --height: 25rem;
@@ -26,7 +27,7 @@ body {
         content: '';
         height: 5rem;
         width: calc(5rem * 600/400);
-        background-image: var(--bg-url);
+        background-image: var(--watermark-url);
         background-size: contain;
         background-repeat: no-repeat;
         bottom: var(--watermark-margin);
