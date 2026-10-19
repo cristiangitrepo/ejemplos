@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Images</title>
+    <style>
+        :root {
+            --bd-url: url('https://st2.depositphotos.com/8573964/12346/i/950/depositphotos_123466770-stock-photo-beach-in-the-morning-sun.jpg');
+            --bg-h1-color: #ffffff80;
+            --foreground-color: #fff;
+            --min-height: 25rem;
+        }
+
+        header {
+            position: relative;
+
+            & h1 {
+                color: var(--bg-h1-color);
+                position: absolute;
+                bottom: 0;
+            }
+        }
+
+        body {
+            /* min-height: 100vh; */
+            height: var(--min-height);
+            background-image: var(--bd-url);
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+
+            & article {
+                color: var(--foreground-color);
+                margin: 10%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Propiedad background-image</h1>
+    </header>
+    <main>
+        <article>
+            <p>La propiedad background-image se utiliza para establecer una imagen de fondo en un elemento HTML. Esta
+                propiedad puede aceptar una URL de imagen, un gradiente o incluso múltiples imágenes separadas por
+                comas.
+            </p>
+            <p>En el ejemplo anterior, se ha utilizado la propiedad background-image para establecer una imagen de fondo
+                en
+                el cuerpo del documento. La imagen se ha configurado para no repetirse y ajustarse al tamaño del
+                contenedor.
+            </p>
+        </article>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+
+</html>
