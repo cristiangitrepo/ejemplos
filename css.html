@@ -12,12 +12,26 @@
             --foreground-color: #fff;
             --article-color: #000;
             --min-height: 25rem;
+            --degradado_linear: linear-gradient(to right, #e6646580, #9198e580);
+        }
+
+        header::before {
+            position: absolute;
+            content: '';
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: var(--min-height);
+            background-image: var(--bd-url);
+            background-size: cover;
+
         }
 
         header {
             position: relative;
             min-height: var(--min-height);
             background-image: var(--bd-url);
+            background-image: var(--degradado_linear), var(--bd-url);
             background-repeat: no-repeat;
             background-size: cover;
 
@@ -30,13 +44,14 @@
                 width: 100%;
                 text-align: center;
                 background-color: rgb(255, 255, 255, .3);
+                /* background-image: var(--degradado_linear); */
             }
         }
 
         body {
             & article {
                 color: var(--article-color);
-                margin: 0 10%;
+                margin: 0;
                 height: 100vh;
             }
         }
@@ -49,6 +64,7 @@
     </header>
     <main>
         <article>
+            <h2>Ejemplo de uso de la propiedad background-image</h2>
             <p>La propiedad background-image se utiliza para establecer una imagen de fondo en un elemento HTML. Esta
                 propiedad puede aceptar una URL de imagen, un gradiente o incluso múltiples imágenes separadas por
                 comas.

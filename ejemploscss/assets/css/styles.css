@@ -1,0 +1,67 @@
+:root {
+    --bg-url: url('https://picsum.photos/600/400');
+    --h1-bg-color: #00000080;
+    --h1-foreground-color: #fff;
+    --height: 25rem;
+    --header-padding: 1em;
+    --main-padding: 5rem 15%;
+    --watermark-margin: 5rem;
+    --watermark-opacity: .25;
+    --degradado_linear: linear-gradient(to right, #e6646580, #9198e580);
+}
+
+
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+    height: 100vh;
+    position: relative;
+
+    &::after {
+        position: absolute;
+        content: '';
+        height: 5rem;
+        width: calc(5rem * 600/400);
+        background-image: var(--bg-url);
+        background-size: contain;
+        background-repeat: no-repeat;
+        bottom: var(--watermark-margin);
+        right: var(--watermark-margin);
+        opacity: var(--watermark-opacity);
+    }
+
+    header.destacada {
+        position: relative;
+        height: var(--height);
+
+        &::before {
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 100%;
+
+            background-image: var(--degradado_linear), var(--bg-url);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        & h1 {
+            position: relative;
+            color: var(--h1-foreground-color);
+            background-color: var(--h1-bg-color);
+            padding: var(--header-padding);
+            text-align: center;
+            top: 33%
+        }
+
+    }
+
+    & main {
+        padding: var(--main-padding);
+    }
+}
