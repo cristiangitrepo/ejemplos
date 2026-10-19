@@ -10,18 +10,14 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>CodeLab Blog</title>
-
-    <style>
-
-    </style>
 </head>
 
 <body>
     <header class="w3-top">
-        <h1 style="display: none;">CodeLab</h1>
+        <h1 class="display-none">CodeLab</h1>
         <nav class="w3-flex w3-white w3-opacity" id="myNavbar">
-            <h2 style="display: none;">Menú</h2>
-            <ul style="list-style: none; display: flex; ">
+            <h2 class="display-none">Menú</h2>
+            <ul>
                 <li><a href="#home" class="w3-button"><i class="fa fa-home"></i>INICIO</a></li>
 
                 <li><a href="#about" class="w3-button w3-hide-small">
@@ -36,12 +32,12 @@
                         <i class="fa fa-envelope"></i> CONTACTO
                     </a></li>
 
-                <li><a href="#" class="w3-button w3-hide-small w3-hover-red" style="margin-left:auto">
+                <li><a href="#" class="w3-button w3-hide-small w3-hover-red leftalign-menuitems">
                         <i class="fa fa-search"></i>
                     </a></li>
             </ul>
 
-            <button class="w3-button w3-hide-medium w3-hide-large" style="margin-left:auto" onclick="toggleFunction()"
+            <button class="w3-button w3-hide-medium w3-hide-large leftalign-menuitems" onclick="toggleFunction()"
                 title="Abrir el menú de navegación">
                 <i class="fa fa-bars"></i>
             </button>
@@ -51,8 +47,8 @@
         <!-- Navigation on small screens -->
         <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
             <nav class="w3-flex w3-white w3-opacity">
-                <h2 style="display: none;">Menú móvil</h2>
-                <ul style="list-style: none;">
+                <h2 class="display-none">Menú móvil</h2>
+                <ul>
                     <li><a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ACERCA DE</a>
 
                     <li><a href="#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">MI TRABAJO</a>
@@ -67,11 +63,11 @@
     </header>
     <main>
         <section>
-            <h2 style="display: none;">Contenido del blog de CodeLab</h2>
+            <h2 class="display-none">Contenido del blog de CodeLab</h2>
             <!-- First Parallax Image -->
             <article class="bgimg-1 w3-display-container w3-opacity-min" id="home">
 
-                <h3 class="w3-display-middle" style="white-space:nowrap">
+                <h3 class="w3-display-middle">
                     <span class="w3-center w3-padding-large w3-gray w3-xlarge w3-wide w3-animate-opacity">
                         <svg width="auto" height="80" viewBox="0 0 833 200" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
@@ -137,7 +133,7 @@
                                 fill="black" />
                             <path d="M672.551 164.272V154.773H619.464V35.0168H609.166V164.272H672.551Z" fill="black" />
                         </svg>
-                        <span style="display: none;">CodeLab</span>
+                        <span class="display-none">CodeLab</span>
                     </span>
                 </h3>
             </article>
@@ -166,7 +162,7 @@
                     aplicar cualquier capa de diseño o interactividad.
                 </p>
 
-                <div class="w3-grid" style="grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:32px">
+                <div class="w3-grid biogrid">
 
                     <div class="w3-center w3-padding-large">
 
@@ -177,8 +173,8 @@
                             </b>
                         </p>
 
-                        <img src="./assets/img/tatoo.webp" class="w3-round w3-opacity w3-hover-opacity-off"
-                            alt="CodeLab CEO photography" style="width:100%;max-width:500px">
+                        <img src="./assets/img/tatoo.webp" class="w3-round w3-opacity w3-hover-opacity-off avatar"
+                            alt="CodeLab CEO photography">
 
                     </div>
 
@@ -212,7 +208,7 @@
                 </p>
 
                 <div class="w3-light-grey">
-                    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:90%">90%</div>
+                    <div id="bar90" class="w3-container w3-padding-small w3-dark-grey w3-center progressbar">90%</div>
                 </div>
 
                 <p class="w3-wide">
@@ -220,7 +216,7 @@
                 </p>
 
                 <div class="w3-light-grey">
-                    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:85%">85%</div>
+                    <div id="bar80" class="w3-container w3-padding-small w3-dark-grey w3-center progressbar">85%</div>
                 </div>
 
                 <p class="w3-wide">
@@ -228,14 +224,13 @@
                 </p>
 
                 <div class="w3-light-grey">
-                    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:75%">75%</div>
+                    <div id="bar75" class="w3-container w3-padding-small w3-dark-grey w3-center progressbar">75%</div>
                 </div>
 
             </article>
 
             <!-- Statistics -->
-            <ul class="w3-grid w3-center w3-dark-grey w3-padding-16"
-                style="margin-bottom: 0px; grid-template-columns:repeat(auto-fit,minmax(150px,1fr))">
+            <ul class="w3-grid w3-center w3-dark-grey w3-padding-16 statisticsgrid">
 
                 <li class="w3-section">
                     <span class="w3-xlarge">14+</span><br>
@@ -282,32 +277,31 @@
                     </em>
                 </p>
 
-                <ul class="w3-grid w3-padding-32"
-                    style="list-style: none; grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px">
+                <ul class="w3-grid w3-padding-32 job-columns-layout">
 
-                    <li><img src="https://www.w3schools.com/w3images/p1.jpg" style="width:100%" onclick="onClick(this)"
-                            class="w3-hover-opacity" alt="La niebla sobre las montañas"></li>
+                    <li><img src="https://www.w3schools.com/w3images/p1.jpg" onclick="onClick(this)"
+                            class="w3-hover-opacity job-img" alt="La niebla sobre las montañas"></li>
 
-                    <li> <img src="https://www.w3schools.com/w3images/p2.jpg" style="width:100%" onclick="onClick(this)"
-                            class="w3-hover-opacity" alt="Granos de café"></li>
+                    <li> <img src="https://www.w3schools.com/w3images/p2.jpg" onclick="onClick(this)"
+                            class="w3-hover-opacity job-img" alt="Granos de café"></li>
 
-                    <li> <img src="https://www.w3schools.com/w3images/p3.jpg" style="width:100%" onclick="onClick(this)"
-                            class="w3-hover-opacity" alt="Oso de cerca"></li>
+                    <li> <img src="https://www.w3schools.com/w3images/p3.jpg" onclick="onClick(this)"
+                            class="w3-hover-opacity job-img" alt="Oso de cerca"></li>
 
-                    <li> <img src="https://www.w3schools.com/w3images/p4.jpg" style="width:100%" onclick="onClick(this)"
-                            class="w3-hover-opacity" alt="Océano en calma"></li>
+                    <li> <img src="https://www.w3schools.com/w3images/p4.jpg" onclick="onClick(this)"
+                            class="w3-hover-opacity job-img" alt="Océano en calma"></li>
 
-                    <li> <img src="https://www.w3schools.com/w3images/p5.jpg" style="width:100%" onclick="onClick(this)"
-                            class="w3-hover-opacity" alt="La niebla"></li>
+                    <li> <img src="https://www.w3schools.com/w3images/p5.jpg" onclick="onClick(this)"
+                            class="w3-hover-opacity job-img" alt="La niebla"></li>
 
-                    <li> <img src="https://www.w3schools.com/w3images/p6.jpg" style="width:100%" onclick="onClick(this)"
-                            class="w3-hover-opacity" alt="Mi querida máquina de escribir"></li>
+                    <li> <img src="https://www.w3schools.com/w3images/p6.jpg" onclick="onClick(this)"
+                            class="w3-hover-opacity job-img" alt="Mi querida máquina de escribir"></li>
 
-                    <li> <img src="https://www.w3schools.com/w3images/p7.jpg" style="width:100%" onclick="onClick(this)"
-                            class="w3-hover-opacity" alt="Tren fantasma"></li>
+                    <li> <img src="https://www.w3schools.com/w3images/p7.jpg" onclick="onClick(this)"
+                            class="w3-hover-opacity job-img" alt="Tren fantasma"></li>
 
-                    <li><img src="https://www.w3schools.com/w3images/p8.jpg" style="width:100%" onclick="onClick(this)"
-                            class="w3-hover-opacity" alt="Navegación"></li>
+                    <li><img src="https://www.w3schools.com/w3images/p8.jpg" onclick="onClick(this)"
+                            class="w3-hover-opacity job-img" alt="Navegación"></li>
 
                 </ul>
 
@@ -356,32 +350,26 @@
                     <em>Me encantaría oir tu opinión!</em>
                 </p>
 
-                <div class="w3-grid w3-padding-32"
-                    style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:32px">
-
+                <div class="w3-grid w3-padding-32 aboutgrid">
                     <div>
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2917.4275038200335!2d-7.559553427074774!3d43.01138811140281!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd31ce853f8f261d%3A0xf54d6c60e1648d55!2sRestaurante%20Campos!5e0!3m2!1ses!2ses!4v1791531749670!5m2!1ses!2ses"
-                            width="320" height="628" style="border:0;" allowfullscreen="" loading="lazy"
+                            width="320" height="628" allowfullscreen="" loading="lazy"
                             referrerpolicy="strict-origin-when-cross-origin"></iframe>
-                        <!-- <img src="./assets/img/plano-lugo.webp" class="w3-round" style="width:100%" alt="Mapa de Lugo"> -->
                     </div>
 
-                    <div
-                        style="border-style: solid; border-color: #777; border-width: .1px; border-radius: 4px; padding: 16px;">
-
+                    <div class="contactbox">
                         <p><strong>DATOS DE CONTACTO</strong></p>
-                        <hr style="margin-bottom: -10px;">
                         <address>
-                            <ul style="display: inline; list-style: none;">
+                            <ul>
                                 <li><i class="fa fa-map-marker fa-fw w3-xlarge w3-margin-right"></i>
                                     Lugo, GA<br></li>
                                 <li><i class="fa fa-phone fa-fw w3-xlarge w3-margin-right"></i>
-                                    <a style="text-decoration: none;" href="tel:+34611252525">Teléfono: +34
+                                    <a class="links" href="tel:+34611252525">Teléfono: +34
                                         611252525</a><br>
                                 </li>
                                 <li><i class="fa fa-envelope fa-fw w3-xlarge w3-margin-right"></i>
-                                    <a style="text-decoration: none;" href="mailto:codelab@protonmail.com">Email:
+                                    <a class="links" href="mailto:codelab@protonmail.com">Email:
                                         codelab@protonmail.com</a>
                                 </li>
                             </ul>
@@ -393,13 +381,10 @@
                         </p>
 
                         <form action="/action_page.php" target="_blank">
-                            <fieldset
-                                style="margin:1em; padding: 0.5em 1em; border-radius: 1px; border-color: lightgray">
-                                <legend style="padding: 1em; border: 1px solid lightgray; border-radius: 8px;">
-                                    Formulario de contacto</legend>
+                            <fieldset>
+                                <legend>Formulario de contacto</legend>
 
-                                <ul class="w3-grid"
-                                    style="margin-bottom: 0px; grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:8px">
+                                <ul class="w3-grid formlist">
 
                                     <li><input class="w3-input w3-border" type="text" placeholder="Nombre" required
                                             name="Name"></li>
@@ -431,14 +416,13 @@
             Navegar al inicio
         </a>
 
-        <ul class="w3-xlarge" style="list-style: none; display:block; margin-left:-40px;">
-            <li style="display: inline;"><a href="https://www.google.com"><i
-                        class="fa fa-facebook-official w3-hover-opacity"></i></a></li>
-            <li style="display: inline;"><i class="fa fa-instagram w3-hover-opacity"></i></li>
-            <li style="display: inline;"><i class="fa fa-snapchat w3-hover-opacity"></i></li>
-            <li style="display: inline;"><i class="fa fa-pinterest-p w3-hover-opacity"></i></li>
-            <li style="display: inline;"><i class="fa fa-twitter w3-hover-opacity"></i></li>
-            <li style="display: inline;"><i class="fa fa-linkedin w3-hover-opacity"></i></li>
+        <ul class="w3-xlarge">
+            <li><a href="https://www.google.com"><i class="fa fa-facebook-official w3-hover-opacity"></i></a></li>
+            <li><i class="fa fa-instagram w3-hover-opacity"></i></li>
+            <li><i class="fa fa-snapchat w3-hover-opacity"></i></li>
+            <li><i class="fa fa-pinterest-p w3-hover-opacity"></i></li>
+            <li><i class="fa fa-twitter w3-hover-opacity"></i></li>
+            <li><i class="fa fa-linkedin w3-hover-opacity"></i></li>
         </ul>
 
         <p>
