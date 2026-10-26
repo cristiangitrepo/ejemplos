@@ -109,6 +109,7 @@ article.carrousel-container {
             flex-shrink: 0;
 
             & figure {
+
                 position: relative;
 
                 margin: 0;
@@ -116,25 +117,23 @@ article.carrousel-container {
                 height: 100%;
 
                 & figcaption {
-                    /* Ubicar el texto abajo centrado */
+
                     position: absolute;
                     bottom: 0;
-                    left: 0;
                     right: 0;
+                    left: 0;
                     text-align: right;
 
                     padding: 1.5em;
                     padding-bottom: 2em;
 
-                    /* Degradado de negro a nada desde abajo */
-                    background: linear-gradient(to top, #00000080, transparent);
+                    background: linear-gradient(to top, #DDffff80, transparent);
                     color: #fff;
+                    text-shadow: 0.1em 0.1em 0.2em #00000080;
                 }
             }
 
-            /* Nombre duración y curva */
             animation: customCarrouselAnimation 10s infinite ease;
-
             /* Avisa al navegador para que use la aceleración por GPU */
             will-change: transform;
         }
