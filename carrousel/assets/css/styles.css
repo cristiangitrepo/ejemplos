@@ -1,0 +1,102 @@
+::root {
+
+    --img-carrousel01-full: url('https://dummyimage.com/1920x1280/000/fff');
+    --img-carrousel01-large: url('https://dummyimage.com/1024x683/000/fff');
+    --img-carrousel01-medium-large: url('https://dummyimage.com/768x512/000/fff');
+    --img-carrousel01-medium: url('https://dummyimage.com/480x320/000/fff');
+    --img-carrousel01-thumb: url('https://dummyimage.com/300x200/000/fff');
+
+    --img-carrousel02-full: url('https://dummyimage.com/1920x1280/050/fff');
+    --img-carrousel02-large: url('https://dummyimage.com/1024x683/050/fff');
+    --img-carrousel02-medium-large: url('https://dummyimage.com/768x512/050/fff');
+    --img-carrousel02-medium: url('https://dummyimage.com/480x320/050/fff');
+    --img-carrousel02-thumb: url('https://dummyimage.com/300x200/050/fff');
+
+    --img-carrousel03-full: url('https://dummyimage.com/1920x1280/a00/fff');
+    --img-carrousel03-large: url('https://dummyimage.com/1024x683/a00/fff');
+    --img-carrousel03-medium-large: url('https://dummyimage.com/768x512/a00/fff');
+    --img-carrousel03-medium: url('https://dummyimage.com/480x320/000/aff');
+    --img-carrousel03-thumb: url('https://dummyimage.com/300x200/000/aff');
+
+    --img-carrousel04-full: url('https://dummyimage.com/1920x1280/f00/fff');
+    --img-carrousel04-large: url('https://dummyimage.com/1024x683/f00/fff');
+    --img-carrousel04-medium-large: url('https://dummyimage.com/768x512/f00/fff');
+    --img-carrousel04-medium: url('https://dummyimage.com/480x320/f00/fff');
+    --img-carrousel04-thumb: url('https://dummyimage.com/300x200/f00/fff');
+
+    --img-carrousel05-full: url('https://dummyimage.com/1920x1280/c00/fff');
+    --img-carrousel05-large: url('https://dummyimage.com/1024x683/c00/fff');
+    --img-carrousel05-medium-large: url('https://dummyimage.com/768x512/c00/fff');
+    --img-carrousel05-medium: url('https://dummyimage.com/480x320/c00/fff');
+    --img-carrousel05-thumb: url('https://dummyimage.com/300x200/c00/fff');
+
+    --ratio-galeria: 9/6;
+
+    --h-carrousel: 50vh;
+}
+
+main section article {
+    padding: 7.5vw;
+}
+
+figure {
+    margin: 0;
+    /* Provisionalmente */
+    border: 1px solid rgb(231, 155, 124);
+}
+
+.img-before {
+    background-color: #a55353;
+    position: relative;
+
+    &::before {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+
+/* Maquetación */
+article.carrousel-container {
+    min-height: 100vh;
+
+    & ul.carrousel {
+        margin: 0;
+        padding: 0;
+
+        list-style: none;
+    }
+}
+
+article.carrousel-container {
+    ul.carrousel {
+
+        /* Se comienza diseñando para el viewport menor*/
+        & li:nth-child(1) figure::before {
+            background-image: var(--img-carrousel01-thumb);
+        }
+
+        & li:nth-child(2) figure::before {
+            background-image: var(--img-carrousel02-thumb);
+        }
+
+        & li:nth-child(3) figure::before {
+            background-image: var(--img-carrousel03-thumb);
+        }
+
+        & li:nth-child(4) figure::before {
+            background-image: var(--img-carrousel04-thumb);
+        }
+
+        & li:nth-child(5) figure::before {
+            background-image: var(--img-carrousel05-thumb);
+        }
+    }
+}
