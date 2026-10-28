@@ -1,0 +1,166 @@
+@charset "UTF-8";
+
+/* 
+    01.- Enlazar a folla de estilos co documento html (0.15 puntos)
+    02.- Utilizaráse unha folla de estilos tipo normalize moderna (0.15 puntos)
+    03.- Os códigos de color gardaranse en variables CSS (0.15 puntos)
+*/
+:root {
+    --color-fondo-footer: #000000;
+    --color-fondo-cabecera: #0000CD;
+    --color-enlace: #a52a2a;
+    --color-enlace-hover: #ffff00;
+    --color-texto-encabezado: #FFFFFF;
+}
+
+/* 
+04.- O h1, os encabezados do menu principal e do pé de páxina non serán visbles na páxina web (0.15 puntos)
+*/
+h1,
+nav>h2,
+footer h2 {
+    display: none;
+}
+
+/* 05.- as ligazóns non terán o típico subraiado (0.15 puntos)   */
+
+a {
+    text-decoration: none;
+}
+
+/* 06.- As listas do menú principal e do footer non terán estilos típicos de listas (0.15 puntos)  */
+nav>ul,
+footer>ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/*
+07.- A cabeceira da sección e o pé de páxina terán un espaciado interior ate o contido 
+de 5rem arriba e abaixo e do 10% nos laterais (0.15 puntos)
+*/
+section>header>h2,
+footer {
+    padding: 5rem 10%;
+}
+
+/* 
+8.- Os artigos do sitio tamén terán o 10% de espacio lateral ate os bordes da páxina web
+(0.15 puntos)
+*/
+article {
+    padding: 0 10%;
+}
+
+/*
+09.- O texto do encabezado da sección terá o dobre do tamaño da letra 
+do elemento raíz da páxina HTML e estará centrado (0.15 puntos)
+*/
+section>header>h2 {
+    font-size: 2rem;
+    text-align: center;
+}
+
+/*
+10.- O texto dos encabezados dos artigos teran 1.5 o tamaño da letra do elemento raíz da páxina HTML (0.15 puntos)
+*/
+article>h3 {
+    font-size: 1.5rem;
+}
+
+/* 11.- O color de fondo do footer será negro en código de color Hex (0.15 puntos) */
+footer {
+    background-color: var(--color-fondo-footer);
+}
+
+/*
+12.- O color de fondo da cabeceira da sección principal 
+será de color 'MediumBlue' en código de color Hex e o encabezado branco
+(0.15 puntos) 
+*/
+section>header {
+    background-color: var(--color-fondo-cabecera);
+
+    & h2 {
+        color: var(--color-texto-encabezado);
+    }
+}
+
+/*
+13.- Os enlaces serán de color 'Brown' en código de color Hex (0.15 puntos)
+14.- Os enlaces pasarán a color 'Yellow' en código Hex ao pasar o rato por riba 
+(0.15 puntos)
+*/
+
+a {
+    color: var(--color-enlace);
+
+    &:hover {
+        color: var(--color-enlace-hover);
+    }
+}
+
+/* a:hover {
+    color: var(--color-enlace-hover);
+} */
+
+
+
+nav.principal>ul {
+    /* 15.- O contenedor dos ítems da lista do menu pricipal será flexible (0.15 puntos) */
+    /* 16.- Os ítems da lista saltarán á liña seguinte cando non collan no espazo dispoñible (0.15 puntos) */
+    /* 17.- Os Ítems estarán xustificados ao centro (0.15 puntos) */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+
+    & li a {
+        /* 18.- Os enlaces do menú seran bloques en liña (0.15 puntos) */
+        display: inline-block;
+        /* 19.- terán un recheo de 1em arriba e abaixo e dous nos laterais (0.15 puntos) */
+        padding: 1em 2em;
+        /* 20.- terán un espacio arredor de 0.5em (0.15 puntos) */
+        margin: 0.5em;
+        /* 21.- terán o mesmo color de fondo que a cabeceira da sección (0.15 puntos) */
+        background-color: var(--color-fondo-cabecera);
+        /* 22.- terán reondeadas as esquinas a 4px (0.15 puntos) */
+        border-radius: 4px;
+    }
+}
+
+
+/* 23.- O main do sitio terá, a lo menos, o alto do dispositivo (0.15 puntos) */
+main {
+    min-height: 100vh;
+}
+
+
+/* section article:nth-child(2) {
+    background-color: lime;
+} */
+
+/* 
+    Cando o ancho do dispositivo chegue ou supere os 640 px ... 
+*/
+@media (min-width: 640px) {
+
+    /* 24.- O espazo lateral dos artigos subirá a un 20% (0.2 puntos) */
+    article {
+        padding: 0 20%;
+    }
+
+    /* 25.- A cabeceira da sección e o pé de páxina tamén terán un espaciado lateral do 20% (0.2 puntos) */
+    section>header>h2,
+    footer {
+        padding: 5rem 20%;
+    }
+
+    /* 26.- A color de fondo do footer pasará a ser da mesma cor que o fondo 
+    que a cabeceira da sección (0.15 puntos) */
+
+    footer {
+        background-color: var(--color-fondo-cabecera);
+    }
+}

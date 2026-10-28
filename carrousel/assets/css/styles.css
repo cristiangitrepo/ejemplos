@@ -207,13 +207,14 @@ main section article {
 /* Maquetación  carrousel*/
 article.carrousel-container {
     min-height: 100vh;
+    /* padding: 20%; */
 
     & ul.carrousel {
         display: flex;
 
         width: 100%;
+        margin: 0 auto;
 
-        margin: 0;
         padding: 0;
         /* Evitar que se muestre el siguiente */
         overflow: hidden;
@@ -266,23 +267,4 @@ article.carrousel-container {
 
     }
 
-    /* & li:nth-child(1) figure::before {
-        background-image: var(--img-carrousel01-thumb);
-    }
-
-    & li:nth-child(2) figure::before {
-        background-image: var(--img-carrousel02-thumb);
-    }
-
-    & li:nth-child(3) figure::before {
-        background-image: var(--img-carrousel03-thumb);
-    }
-
-    & li:nth-child(4) figure::before {
-        background-image: var(--img-carrousel04-thumb);
-    }
-
-    & li:nth-child(5) figure::before {
-        background-image: var(--img-carrousel05-thumb);
-    } */
 }
