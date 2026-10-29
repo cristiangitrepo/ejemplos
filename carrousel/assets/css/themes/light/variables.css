@@ -37,23 +37,3 @@
     --bg-img-galeria-5: url("https://cdn.pixabay.com/photo/2020/06/28/00/04/chicago-5347435_1280.jpg");
 
 }
-
-figure.diapositiva-1::before {
-    background-image: var(--bg-img-galeria-1);
-}
-
-figure.diapositiva-2::before {
-    background-image: var(--bg-img-galeria-2);
-}
-
-figure.diapositiva-3::before {
-    background-image: var(--bg-img-galeria-3);
-}
-
-figure.diapositiva-4::before {
-    background-image: var(--bg-img-galeria-4);
-}
-
-figure.diapositiva-5::before {
-    background-image: var(--bg-img-galeria-5);
-}

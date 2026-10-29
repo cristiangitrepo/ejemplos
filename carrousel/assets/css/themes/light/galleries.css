@@ -1,18 +1,3 @@
-ul.galeriaFlex figure.img-before {
-    background-color: pink;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    & figcaption {
-        color: #fff;
-        background-color: #ff000050;
-        padding: 1em;
-        width: 100%;
-        text-align: center;
-    }
-}
-
 ul.galeriaFlex {
     display: flex;
     flex-wrap: wrap;
@@ -20,7 +5,6 @@ ul.galeriaFlex {
     gap: 1rem;
 
     & li {
-        /* width: 20rem; */
         min-width: 20rem;
         height: 15rem;
         /* flex: 1 */
@@ -29,6 +13,21 @@ ul.galeriaFlex {
         & .img-before {
             width: 100%;
             height: 100%;
+        }
+    }
+
+    & figure.img-before {
+        background-color: pink;
+        display: flex;
+        /* justify-content: center; */
+        align-items: end;
+
+        & figcaption {
+            color: #fff;
+            background-color: #ff000050;
+            padding: 1em;
+            width: 100%;
+            text-align: left;
         }
     }
 }
@@ -68,4 +67,24 @@ ul.galeria {
             background: rgba(0, 0, 0, 0.5);
         }
     }
+}
+
+figure.diapositiva-1::before {
+    background-image: var(--bg-img-galeria-1);
+}
+
+figure.diapositiva-2::before {
+    background-image: var(--bg-img-galeria-2);
+}
+
+figure.diapositiva-3::before {
+    background-image: var(--bg-img-galeria-3);
+}
+
+figure.diapositiva-4::before {
+    background-image: var(--bg-img-galeria-4);
+}
+
+figure.diapositiva-5::before {
+    background-image: var(--bg-img-galeria-5);
 }
