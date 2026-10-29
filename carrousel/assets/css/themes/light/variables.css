@@ -1,0 +1,59 @@
+:root {
+    --img-carrousel01-full: url("https://dummyimage.com/1920x1280/000/fff");
+    --img-carrousel01-large: url("https://dummyimage.com/1024x683/000/fff");
+    --img-carrousel01-medium-large: url("https://dummyimage.com/768x512/000/fff");
+    --img-carrousel01-medium: url("https://dummyimage.com/480x320/000/fff");
+    --img-carrousel01-thumb: url("https://dummyimage.com/300x200/000/fff");
+
+    --img-carrousel02-full: url("https://dummyimage.com/1920x1280/050/fff");
+    --img-carrousel02-large: url("https://dummyimage.com/1024x683/050/fff");
+    --img-carrousel02-medium-large: url("https://dummyimage.com/768x512/050/fff");
+    --img-carrousel02-medium: url("https://dummyimage.com/480x320/050/fff");
+    --img-carrousel02-thumb: url("https://dummyimage.com/300x200/050/fff");
+
+    --img-carrousel03-full: url("https://dummyimage.com/1920x1280/a00/fff");
+    --img-carrousel03-large: url("https://dummyimage.com/1024x683/a00/fff");
+    --img-carrousel03-medium-large: url("https://dummyimage.com/768x512/a00/fff");
+    --img-carrousel03-medium: url("https://dummyimage.com/480x320/a00/fff");
+    --img-carrousel03-thumb: url("https://dummyimage.com/300x200/a00/fff");
+
+    --img-carrousel04-full: url("https://dummyimage.com/1920x1280/f00/fff");
+    --img-carrousel04-large: url("https://dummyimage.com/1024x683/f00/fff");
+    --img-carrousel04-medium-large: url("https://dummyimage.com/768x512/f00/fff");
+    --img-carrousel04-medium: url("https://dummyimage.com/480x320/f00/fff");
+    --img-carrousel04-thumb: url("https://dummyimage.com/300x200/f00/fff");
+
+    --img-carrousel05-full: url("https://dummyimage.com/1920x1280/c00/fff");
+    --img-carrousel05-large: url("https://dummyimage.com/1024x683/c00/fff");
+    --img-carrousel05-medium-large: url("https://dummyimage.com/768x512/c00/fff");
+    --img-carrousel05-medium: url("https://dummyimage.com/480x320/c00/fff");
+    --img-carrousel05-thumb: url("https://dummyimage.com/300x200/c00/fff");
+
+    /* Galería de imágenes */
+    --bg-img-galeria-1: url("https://cdn.pixabay.com/photo/2017/11/11/21/55/freedom-2940655_1280.jpg");
+    --bg-img-galeria-2: url("https://cdn.pixabay.com/photo/2016/11/13/12/52/kuala-lumpur-1820944_1280.jpg");
+    --bg-img-galeria-3: url("https://cdn.pixabay.com/photo/2018/05/09/22/51/blue-sky-3386409_1280.jpg");
+    --bg-img-galeria-4: url("https://cdn.pixabay.com/photo/2020/10/02/21/06/dome-5622133_1280.jpg");
+    --bg-img-galeria-5: url("https://cdn.pixabay.com/photo/2020/06/28/00/04/chicago-5347435_1280.jpg");
+
+}
+
+figure.diapositiva-1::before {
+    background-image: var(--bg-img-galeria-1);
+}
+
+figure.diapositiva-2::before {
+    background-image: var(--bg-img-galeria-2);
+}
+
+figure.diapositiva-3::before {
+    background-image: var(--bg-img-galeria-3);
+}
+
+figure.diapositiva-4::before {
+    background-image: var(--bg-img-galeria-4);
+}
+
+figure.diapositiva-5::before {
+    background-image: var(--bg-img-galeria-5);
+}
