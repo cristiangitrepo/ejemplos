@@ -37,11 +37,11 @@
     }
 
     90% {
-        transform: translateX(40vw) rotate(-20deg);
+        transform: translateX(70vw) rotate(-20deg);
     }
 
     100% {
-        transform: translateX(50vw) rotate(0deg);
+        transform: translateX(90vw) rotate(0deg);
     }
 }
 
