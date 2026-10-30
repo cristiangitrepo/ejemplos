@@ -3,9 +3,13 @@ ul.galeriaFlex {
     flex-wrap: wrap;
     justify-content: center;
     gap: 1rem;
+    margin: 0;
+    padding: 0;
+
 
     & li {
-        min-width: 20rem;
+        margin: 0;
+        padding: 0;
         height: 15rem;
         /* flex: 1 */
         flex: auto;
@@ -21,6 +25,8 @@ ul.galeriaFlex {
         display: flex;
         /* justify-content: center; */
         align-items: end;
+        margin: 0;
+        padding: 0;
 
         & figcaption {
             color: #fff;

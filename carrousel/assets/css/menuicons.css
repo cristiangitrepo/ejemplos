@@ -9,11 +9,11 @@
 
 .logo {
     position: absolute;
-    margin-top: -1px;
+    margin-top: -32px;
 
     & img {
-        width: 3em;
-        height: 3em;
+        width: 2.5em;
+        height: 2.5em;
     }
 }
 
@@ -229,5 +229,12 @@ nav.principal {
                 }
             }
         }
+    }
+}
+
+@media screen,
+(max-width: 600px) {
+    main section article {
+        padding: 0;
     }
 }

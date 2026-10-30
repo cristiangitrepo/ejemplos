@@ -1,5 +1,5 @@
 .road {
-    width: 100vw;
+    width: 100%;
     display: block;
     height: 10em;
     background-image: url("../img/road.jpg");
@@ -11,7 +11,7 @@
     }
 
     & li {
-        width: 100vw;
+        width: 100%;
     }
 }
 
