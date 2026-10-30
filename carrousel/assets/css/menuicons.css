@@ -9,10 +9,10 @@
 
 .logo {
     position: absolute;
-    margin-top: -32px;
+    /* margin-top: -32px; */
 
     & img {
-        width: 2.5em;
+        /* width: 2.5em; */
         height: 2.5em;
     }
 }
