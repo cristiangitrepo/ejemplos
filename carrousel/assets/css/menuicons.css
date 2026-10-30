@@ -7,9 +7,23 @@
     --color-menu-background-hover: #000;
 }
 
+.logo {
+    position: absolute;
+    margin-top: -1px;
+
+    & img {
+        width: 3em;
+        height: 3em;
+    }
+}
+
 nav.principal {
     position: relative;
     background-color: var(--color-menu);
+
+    .logo {
+        display: none;
+    }
 
     /* Ocultamiento accesible: el checkbox sigue siendo enfocable */
     & #icon-menu {
@@ -136,6 +150,10 @@ nav.principal {
         & #icon-menu,
         & #icon-menu+label {
             display: none;
+        }
+
+        .logo {
+            display: initial;
         }
 
         &>ul {
