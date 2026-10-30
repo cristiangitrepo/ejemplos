@@ -36,12 +36,12 @@
         transform: translateX(0) rotate(0deg);
     }
 
-    50% {
+    90% {
         transform: translateX(40vw) rotate(-20deg);
     }
 
     100% {
-        transform: translateX(60vw) rotate(0deg);
+        transform: translateX(50vw) rotate(0deg);
     }
 }
 
