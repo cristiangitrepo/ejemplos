@@ -1,0 +1,727 @@
+/* =====================================================
+    ESTILOS GENERALES
+   Diseño moderno y responsive
+   ===================================================== */
+
+/* <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="./assets/css/menuicons.css">
+    <link rel="stylesheet" href="./assets/css/themes/light/animations.css">
+    <link rel="stylesheet" href="./assets/css/themes/light/carrousel.css">
+    <link rel="stylesheet" href="./assets/css/themes/light/galleries.css">
+    <link rel="stylesheet" href="./assets/css/themes/light/layout.css">
+    <link rel="stylesheet" href="./assets/css/themes/light/variables.css">
+    <link rel="stylesheet" href="./assets/css/themes/light/controls.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Henny+Penny&family=Ultra&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet"> */
+
+/* VARIABLES */
+:root {
+    --color-background: #e9e6e2;
+    --color-white: #ffffff;
+    --color-black: #222222;
+    --color-text: #292929;
+    --color-muted: #777777;
+    --color-primary: #df251b;
+    --color-primary-hover: #b91e17;
+
+    --font-main: 'Nunito Sans', sans-serif;
+    --font-secondary: 'Inter', sans-serif;
+
+    --radius: 8px;
+    --shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
+
+    --container-width: 1200px;
+
+    /* Galería de imágenes */
+    --bg-img-galeria-1: url("https://cdn.pixabay.com/photo/2017/11/11/21/55/freedom-2940655_1280.jpg");
+    --bg-img-galeria-2: url("https://cdn.pixabay.com/photo/2016/11/13/12/52/kuala-lumpur-1820944_1280.jpg");
+    --bg-img-galeria-3: url("https://cdn.pixabay.com/photo/2018/05/09/22/51/blue-sky-3386409_1280.jpg");
+    --bg-img-galeria-4: url("https://cdn.pixabay.com/photo/2020/10/02/21/06/dome-5622133_1280.jpg");
+    --bg-img-galeria-5: url("https://cdn.pixabay.com/photo/2020/06/28/00/04/chicago-5347435_1280.jpg");
+}
+
+.diapositiva-1 {
+    background-image: var(--bg-img-galeria-1);
+}
+
+.diapositiva-2 {
+    background-image: var(--bg-img-galeria-2);
+}
+
+.diapositiva-3 {
+    background-image: var(--bg-img-galeria-3);
+}
+
+.diapositiva-4 {
+    background-image: var(--bg-img-galeria-4);
+}
+
+.diapositiva-5 {
+    background-image: var(--bg-img-galeria-5);
+}
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--color-background);
+    color: var(--color-text);
+    font-family: var(--font-main);
+    font-size: 15px;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+figure {
+    margin: 0;
+}
+
+/* =====================================================
+   CABECERA
+   ===================================================== */
+
+body>header {
+    width: 100%;
+    min-height: 20px;
+}
+
+/* =====================================================
+   NAVEGACIÓN PRINCIPAL
+   ===================================================== */
+
+nav.principal {
+    position: relative;
+    z-index: 100;
+    width: min(94%, var(--container-width));
+    min-height: 75px;
+    margin: 30px auto 0;
+    padding: 12px 35px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: var(--color-white);
+    box-shadow: var(--shadow);
+}
+
+nav.principal .logo {
+    display: flex;
+    align-items: center;
+    width: 130px;
+}
+
+nav.principal .logo figure {
+    width: 100%;
+}
+
+nav.principal .logo img {
+    width: 100%;
+    max-height: 48px;
+    object-fit: contain;
+}
+
+nav.principal>ul {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+nav.principal>ul>li {
+    position: relative;
+}
+
+nav.principal>ul>li>a {
+    display: block;
+    padding: 12px 0;
+
+    color: var(--color-black);
+    font-family: var(--font-secondary);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .4px;
+
+    transition: color .3s ease;
+}
+
+nav.principal>ul>li>a:hover {
+    color: var(--color-primary);
+}
+
+/* SUBMENÚ */
+
+nav.principal ul ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    min-width: 170px;
+    padding: 10px 0;
+
+    background: var(--color-white);
+    box-shadow: var(--shadow);
+    border-radius: 5px;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+
+    transition: all .25s ease;
+}
+
+nav.principal ul li:hover>ul {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+nav.principal ul ul a {
+    display: block;
+    padding: 9px 18px;
+    font-size: 13px;
+    transition: .2s;
+}
+
+nav.principal ul ul a:hover {
+    color: var(--color-primary);
+    background: #f7f7f7;
+}
+
+/* ICONO MENÚ MÓVIL */
+
+#icon-menu {
+    display: none;
+}
+
+.icon-menu {
+    display: none;
+    cursor: pointer;
+}
+
+/* =====================================================
+   CONTENIDO PRINCIPAL
+   ===================================================== */
+
+main {
+    width: min(94%, var(--container-width));
+    margin: 0 auto;
+    padding: 35px 0 70px;
+
+    background: var(--color-white);
+}
+
+main>section {
+    width: 100%;
+    padding: 35px 5%;
+    margin-bottom: 20px;
+}
+
+main article {
+    width: 100%;
+}
+
+main h2 {
+    margin-bottom: 22px;
+
+    color: var(--color-black);
+    font-family: var(--font-secondary);
+    font-size: clamp(22px, 3vw, 32px);
+    font-weight: 750;
+    line-height: 1.2;
+}
+
+main p {
+    margin-bottom: 25px;
+    color: var(--color-muted);
+}
+
+/* =====================================================
+   SECCIONES AGUA
+   ===================================================== */
+
+.agua {
+    background: var(--color-white);
+}
+
+.agua article {
+    width: 100%;
+}
+
+/* =====================================================
+   GALERÍA FLEXBOX SUPERIOR
+   ===================================================== */
+
+.galeriaFlex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 15px;
+
+    width: 100%;
+}
+
+.galeriaFlex li {
+    flex: 1 1 180px;
+    min-width: 0;
+}
+
+.galeriaFlex figure {
+    position: relative;
+    width: 100%;
+    height: 230px;
+
+    overflow: hidden;
+    border-radius: var(--radius);
+    background-color: #ddd;
+
+    box-shadow: var(--shadow);
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.galeriaFlex figure:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 9px 22px rgba(0, 0, 0, .14);
+}
+
+/* =====================================================
+   IMÁGENES DE LAS DIAPOSITIVAS
+   Se mantienen las imágenes definidas en tus otros CSS.
+   ===================================================== */
+
+.diapositiva-1,
+.diapositiva-2,
+.diapositiva-3,
+.diapositiva-4,
+.diapositiva-5 {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* FIGCAPTION */
+
+figure figcaption {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    padding: 35px 15px 14px;
+
+    color: var(--color-white);
+    font-family: var(--font-secondary);
+    font-size: 14px;
+    font-weight: 700;
+
+    background: linear-gradient(transparent,
+            rgba(0, 0, 0, .8));
+}
+
+/* =====================================================
+   GALERÍA FLEX
+   ===================================================== */
+
+.galeria-flex {
+    padding-top: 20px;
+}
+
+.galeria-flex h2 {
+    margin-bottom: 8px;
+}
+
+.galeria-flex>p {
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+
+    width: 100%;
+}
+
+.galeria li {
+    flex: 1 1 210px;
+    min-width: 0;
+}
+
+.galeria figure {
+    position: relative;
+    width: 100%;
+    height: 220px;
+
+    overflow: hidden;
+    border-radius: var(--radius);
+    background-color: #ddd;
+
+    box-shadow: var(--shadow);
+    transition: transform .3s ease;
+}
+
+.galeria figure:hover {
+    transform: scale(1.025);
+}
+
+/* =====================================================
+   IMÁGENES CON CAPA OSCURA
+   ===================================================== */
+
+.img-before {
+    position: relative;
+    overflow: hidden;
+}
+
+.img-before::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(180deg,
+            transparent 45%,
+            rgba(0, 0, 0, .55));
+
+    opacity: .7;
+    transition: opacity .3s ease;
+}
+
+.img-before:hover::before {
+    opacity: 1;
+}
+
+/* =====================================================
+   CARRUSEL
+   ===================================================== */
+
+.carrousel-container {
+    padding: 35px 0;
+    overflow: hidden;
+}
+
+.carrousel-container h2 {
+    margin-bottom: 10px;
+}
+
+.carrousel-container p {
+    margin-bottom: 25px;
+    font-size: 14px;
+}
+
+.carrousel {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    width: max-content;
+    animation: desplazamiento 25s linear infinite;
+}
+
+.carrousel:hover {
+    animation-play-state: paused;
+}
+
+.carrousel li {
+    flex: 0 0 270px;
+}
+
+.carrousel figure {
+    position: relative;
+    width: 270px;
+    height: 190px;
+
+    overflow: hidden;
+    border-radius: var(--radius);
+    background-color: #ddd;
+
+    box-shadow: var(--shadow);
+}
+
+@keyframes desplazamiento {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* =====================================================
+   ANIMACIÓN ROAD
+   ===================================================== */
+
+.road {
+    position: relative;
+    width: 100%;
+    height: 220px;
+
+    overflow: hidden;
+    border-radius: var(--radius);
+
+    background: linear-gradient(180deg,
+            #dce9ef 0%,
+            #e9e5d8 65%,
+            #777 66%,
+            #333 100%);
+}
+
+.road li {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+
+    width: 100%;
+}
+
+.moto {
+    background-image: url("../img/moto.svg");
+}
+
+.road {
+    height: 150px;
+    background-image: url("../img/road.jpg");
+}
+
+.road .moto {
+    position: relative;
+    width: 100px;
+    height: 70px;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    animation: movimiento-moto 4s linear infinite;
+}
+
+@keyframes movimiento-moto {
+    0% {
+        transform: translateX(-120px);
+    }
+
+    100% {
+        transform: translateX(calc(100vw + 120px));
+    }
+}
+
+/* =====================================================
+   EFECTOS Y TRANSICIONES
+   ===================================================== */
+
+button,
+input,
+a {
+    font-family: inherit;
+}
+
+a,
+button {
+    -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+    color: white;
+    background: var(--color-primary);
+}
+
+/* =====================================================
+   RESPONSIVE - TABLETS
+   ===================================================== */
+
+@media (max-width: 900px) {
+
+    nav.principal {
+        padding: 12px 20px;
+    }
+
+    nav.principal>ul {
+        gap: 20px;
+    }
+
+    main {
+        width: 96%;
+    }
+
+    main>section {
+        padding: 25px 4%;
+    }
+
+    .galeriaFlex li {
+        flex-basis: 200px;
+    }
+
+    .galeria li {
+        flex-basis: 180px;
+    }
+}
+
+/* =====================================================
+   RESPONSIVE - MÓVILES
+   ===================================================== */
+
+@media (max-width: 650px) {
+
+    nav.principal {
+        min-height: 65px;
+        flex-wrap: wrap;
+        margin-top: 10px;
+    }
+
+    nav.principal .logo {
+        width: 105px;
+    }
+
+    .icon-menu {
+        display: block;
+        order: 3;
+
+        padding: 8px 12px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+
+        font-size: 12px;
+        font-weight: 700;
+    }
+
+    nav.principal>ul {
+        display: none;
+        order: 4;
+
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    #icon-menu:checked~ul {
+        display: flex;
+    }
+
+    nav.principal>ul>li {
+        width: 100%;
+    }
+
+    nav.principal>ul>li>a {
+        padding: 12px;
+        border-top: 1px solid #eee;
+    }
+
+    nav.principal ul ul {
+        position: static;
+        display: none;
+
+        padding-left: 20px;
+        box-shadow: none;
+
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+    }
+
+    nav.principal ul li:hover>ul {
+        display: block;
+    }
+
+    main {
+        width: 100%;
+        padding-top: 15px;
+    }
+
+    main>section {
+        padding: 25px 18px;
+    }
+
+    main h2 {
+        font-size: 23px;
+    }
+
+    .galeriaFlex {
+        gap: 12px;
+    }
+
+    .galeriaFlex li {
+        flex: 1 1 100%;
+    }
+
+    .galeriaFlex figure {
+        height: 220px;
+    }
+
+    .galeria {
+        gap: 12px;
+    }
+
+    .galeria li {
+        flex: 1 1 100%;
+    }
+
+    .galeria figure {
+        height: 230px;
+    }
+
+    .carrousel li {
+        flex-basis: 230px;
+    }
+
+    .carrousel figure {
+        width: 230px;
+        height: 170px;
+    }
+
+    .road {
+        height: 160px;
+    }
+}
+
+/* =====================================================
+   REDUCCIÓN DE MOVIMIENTO
+   ===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
