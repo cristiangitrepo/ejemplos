@@ -737,6 +737,10 @@ button {
     font-family: Arial, Helvetica, sans-serif;
     padding: 45px 8% 20px;
     box-sizing: border-box;
+
+    width: min(94%, var(--container-width));
+    margin: 0 auto;
+
 }
 
 /* Contenedor principal */
