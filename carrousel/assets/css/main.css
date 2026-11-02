@@ -777,8 +777,8 @@ button {
 .footer-social a {
     width: 25px;
     height: 25px;
-    border: 1px solid #777;
-    border-radius: 50%;
+    /* border: 1px solid #777; */
+    /* border-radius: 50%; */
     display: flex;
     align-items: center;
     justify-content: center;
