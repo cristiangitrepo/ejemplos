@@ -748,13 +748,13 @@ body {
 ========================================= */
 
 main {
-    width: 100%;
+    min(94%, var(--container-width));
     min-height: 100vh;
-    padding: 60px 10px;
+    padding: 60px 20px;
 }
 
 main section {
-    max-width: min(94%, var(--container-width));
+    max-width: 850px;
     margin: 0 auto;
     background-color: #ffffff;
     padding: 45px 55px;
