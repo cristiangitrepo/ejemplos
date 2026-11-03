@@ -1010,7 +1010,7 @@ legend {
 
 /* Botón back */
 
-input[type="button"] {
+a.back {
     width: auto !important;
     min-width: 120px;
     padding: 13px 25px !important;
@@ -1026,7 +1026,7 @@ input[type="button"] {
     color: #ffffff !important;
 }
 
-input[type="button"]:hover {
+a.back:hover {
     background-color: #202020 !important;
     border-color: #202020 !important;
 }
