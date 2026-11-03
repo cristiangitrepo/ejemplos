@@ -750,11 +750,11 @@ body {
 main {
     width: 100%;
     min-height: 100vh;
-    padding: 60px 20px;
+    padding: 60px 10px;
 }
 
 main section {
-    max-width: 850px;
+    max-width: min(94%, var(--container-width));
     margin: 0 auto;
     background-color: #ffffff;
     padding: 45px 55px;
