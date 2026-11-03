@@ -822,7 +822,7 @@ legend {
 }
 
 #formContacto fieldset>ul:first-of-type {
-    display: grid;
+    display: flexbox;
     grid-template-columns: repeat(2, 1fr);
     gap: 22px 25px;
 }
@@ -882,7 +882,7 @@ legend {
 ========================================= */
 
 #formContacto li:has(input[type="radio"]) {
-    display: flex;
+    display: blo;
     flex-direction: row;
     align-items: center;
     gap: 9px;
