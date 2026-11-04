@@ -822,7 +822,7 @@ legend {
 }
 
 #formContacto fieldset>ul:first-of-type {
-    display: flexbox;
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 22px 25px;
 }
