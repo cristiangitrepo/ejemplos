@@ -257,8 +257,7 @@
                                                         Los números pueden comenzar por cero.
                                                         La letra debe corresponder al resto módulo 23.
                                                     -->
-                                <input type="text" id="dni" name="dni" placeholder="12345678Z" maxlength="9" title=""
-                                    required />
+                                <input type="text" id="dni" name="dni" placeholder="12345678Z" maxlength="9" title="" />
                             </li>
 
                             <li>
@@ -280,7 +279,7 @@
                                                         Entre 2 y 30 caracteres.
                                                         Admitir letras españolas, acentos y espacios.
                                                     -->
-                                <input type="text" id="nombre" name="nombre" maxlength="30" title="" required />
+                                <input type="text" id="nombre" name="nombre" maxlength="30" title="" />
                             </li>
 
                             <li>
@@ -291,7 +290,7 @@
                                                         Entre 2 y 60 caracteres.
                                                         Admitir letras, acentos, espacios y guiones.
                                                     -->
-                                <input type="text" id="apellidos" name="apellidos" maxlength="60" required />
+                                <input type="text" id="apellidos" name="apellidos" maxlength="60" />
                             </li>
 
                             <li>
@@ -302,13 +301,13 @@
                                                         Debe ser una fecha comprendida entre 18 y 100 años.
                                                         min y max son restricciones de fecha, no patrones.
                                                     -->
-                                <input type="date" id="nacimiento" name="nacimiento" min="" max="" required />
+                                <input type="date" id="nacimiento" name="nacimiento" min="" max="" />
                             </li>
 
                             <li>
                                 <label for="estadoCivil">Estado civil:</label>
 
-                                <select id="estadoCivil" name="estadoCivil" required>
+                                <select id="estadoCivil" name="estadoCivil">
                                     <option value="">Selecciona...</option>
                                     <option value="soltero">
                                         Soltero/a
@@ -356,7 +355,7 @@
                                                         No admitir espacios ni prefijos internacionales.
                                                     -->
                                 <input type="tel" id="telefono" name="telefono" placeholder="600123456" maxlength="9"
-                                    title="" required />
+                                    title="" pattern="^[6789]\d{8}$" />
                             </li>
 
                             <li>
@@ -368,7 +367,7 @@
                                                         Completar con un pattern para una validación básica.
                                                     -->
                                 <input type="email" id="email" name="email" placeholder="usuario@dominio.es" pattern=""
-                                    title="" required />
+                                    title="" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" />
                             </li>
 
                             <li>
@@ -380,14 +379,14 @@
                                                         Probar y mejorar con un pattern
                                                     -->
                                 <input type="url" id="web" name="web" placeholder="https://www.ejemplo.es" pattern=""
-                                    title="" />
+                                    title="" pattern="^https?://.+$" />
                             </li>
 
                             <li>
                                 <label for="contacto">Buscar contacto (ejemplo):</label>
 
                                 <!-- INPUT HTML5: search -->
-                                <input type="search" id="contacto" name="contacto" />
+                                <input type="search" id="contacto" name="contacto" pattern="[a-zA-Z0-9]{2,}" />
                             </li>
 
                             <li>
@@ -399,8 +398,10 @@
                                                         Al menos una mayúscula, una minúscula,
                                                         un número y un carácter especial.
                                                     -->
-                                <input type="password" id="password" name="password" minlength="" maxlength="" title=""
-                                    required />
+                                <input type="password" id="password" name="password" minlength="8" maxlength="16" title="Entre 8 y 16 caracteres.
+                                                        Al menos una mayúscula, una minúscula,
+                                                        un número y un carácter especial."
+                                    pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,16}$" />
                             </li>
                         </ul>
                     </fieldset>
