@@ -367,7 +367,7 @@
                                                         Completar con un pattern para una validación básica.
                                                     -->
                                 <input type="email" id="email" name="email" placeholder="usuario@dominio.es" pattern=""
-                                    title="" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" />
+                                    title="" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-z]{2,}$" />
                             </li>
 
                             <li>
@@ -378,15 +378,14 @@
                                                         El navegador comprueba que tenga formato de URL.
                                                         Probar y mejorar con un pattern
                                                     -->
-                                <input type="url" id="web" name="web" placeholder="https://www.ejemplo.es" pattern=""
-                                    title="" pattern="^https?://.+$" />
+                                <input type="url" id="web" name="web" placeholder="https://www.ejemplo.es" title="" />
                             </li>
 
                             <li>
                                 <label for="contacto">Buscar contacto (ejemplo):</label>
 
                                 <!-- INPUT HTML5: search -->
-                                <input type="search" id="contacto" name="contacto" pattern="[a-zA-Z0-9]{2,}" />
+                                <input type="search" id="contacto" name="contacto" />
                             </li>
 
                             <li>
@@ -398,6 +397,7 @@
                                                         Al menos una mayúscula, una minúscula,
                                                         un número y un carácter especial.
                                                     -->
+
                                 <input type="password" id="password" name="password" minlength="8" maxlength="16" title="Entre 8 y 16 caracteres.
                                                         Al menos una mayúscula, una minúscula,
                                                         un número y un carácter especial."
